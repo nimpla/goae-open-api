@@ -1,7 +1,13 @@
 # GOÄ-Open-API
 
-<img src="https://flat.badgen.net/github/last-commit/nimpla/goae-open-api">
-<img src="https://flat.badgen.net/david/dep/nimpla/goae-open-api">
+<img src="https://flat.badgen.net/github/last-commit/nimpla/goae-open-api"> <img src="https://flat.badgen.net/david/dep/nimpla/goae-open-api">
+
+## Unterstützte Leistungen
+
+* O. Strahlenmedizin/MRT
+    * I. Strahlendiagnostik
+        * 7. Computertomographie
+    * III. MRT
 
 ## Hinweis
 
