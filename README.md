@@ -1,4 +1,4 @@
-# GOÄ-Open-API
+# GOÄ-Public-API (unofficial)
 
 <img src="https://flat.badgen.net/github/last-commit/nimpla/goae-open-api"> <img src="https://flat.badgen.net/david/dep/nimpla/goae-open-api">
 
