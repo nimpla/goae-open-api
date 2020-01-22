@@ -6,8 +6,9 @@
 
 * O. Strahlenmedizin/MRT
     * I. Strahlendiagnostik
-        * 7. Computertomographie
+        * 7 Computertomographie
     * III. MRT
+* P. Sektionsleistungen
 
 ## Hinweis
 

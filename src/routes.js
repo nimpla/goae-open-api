@@ -13,12 +13,8 @@ router.get('/', (req, res, next) => {
 router.get('/:category/:roman?/:id?', (req, res) => {
     const { category, roman, id } = req.params;
     let out = data.find(x => x.id === category);
-    if (roman) {
-        out = out.records.find(x => x.id === roman);
-    }
-    if (id) {
-        out = out.records.find(x => x.id === id);
-    }
+    if (roman) out = out.records.find(x => x.id === roman);
+    if (id) out = out.records.find(x => x.id === id);
     if (out) {
         return res.status(200).json({
             success: true,
@@ -28,7 +24,7 @@ router.get('/:category/:roman?/:id?', (req, res) => {
     }
     return res.status(404).json({
         success: false,
-        message: `Datensatz ${id} im Index ${roman} wurde nicht gefunden!`,
+        message: `Datensatz der Kategorie ${category} mit der ID ${id} im Index ${roman} wurde nicht gefunden!`,
     });
 });
 
