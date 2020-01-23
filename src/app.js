@@ -1,12 +1,16 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
-import compression from 'compression';
+import logger from 'morgan';
+import rateLimit from 'express-rate-limit';
 
 import router from './routes';
 
 // Express
 const app = express();
+
+// Logger
+app.use(logger('tiny'));
 
 // Body Parser
 app.use(bodyParser.json());
@@ -18,8 +22,11 @@ app.use(helmet.frameguard({ action: 'sameorigin' }));
 app.use(helmet.xssFilter());
 app.use(helmet.hidePoweredBy());
 
-// GZIP Compression
-app.use(compression()); // FIXME: Make use of NGINX (Proxy) Compression
+// Limiter
+app.use(rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+}));
 
 // Routes
 app.use('/', router);

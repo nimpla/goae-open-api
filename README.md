@@ -23,12 +23,12 @@ Quelle: <a href="http://www.e-bis.de/goae/defaultFrame.htm">http://www.e-bis.de/
 ## Verwendung
 
 #### Strahlenmedizin/MRT => Strahlendiagnostik => Computertomographie
-https://localhost:300/o/i/7
+https://localhost:3000/o/i/7
 
 #### Suche nach Nummer 5371
-https://localhost:300/search/5371
+https://localhost:3000/search/5371
 
-## Contribution
+## Contribute
 
     {
         number: 000,
