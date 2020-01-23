@@ -2,6 +2,12 @@
 
 <img src="https://flat.badgen.net/github/last-commit/nimpla/goae-open-api"> <img src="https://flat.badgen.net/david/dep/nimpla/goae-open-api">
 
+## Hinweis
+
+Die hier verwendeten Daten wurden mit vollster Fürsorge des Autors übertragen. Für die Veröffentlichung dieser Informationen kann aber keine Haftung oder Garantie für Aktualität, Richtigkeit und Vollständigkeit übernommen werden.
+
+Quelle: <a href="http://www.e-bis.de/goae/defaultFrame.htm">http://www.e-bis.de/goae/defaultFrame.htm<a>
+
 ## Unterstützte Leistungen
 
     B. Grundleistungen
@@ -14,20 +20,20 @@
        III. MRT
     P. Sektionsleistungen
 
-## Hinweis
+## Verwendung
 
-Die hier verwendeten Daten wurden mit vollster Fürsorge des Autors übertragen. Für die Veröffentlichung dieser Informationen kann aber keine Haftung oder Garantie für Aktualität, Richtigkeit und Vollständigkeit übernommen werden.
+#### Strahlenmedizin/MRT => Strahlendiagnostik => Computertomographie
+https://localhost:300/o/i/7
 
-Quelle: <a href="http://www.e-bis.de/goae/defaultFrame.htm">http://www.e-bis.de/goae/defaultFrame.htm<a>
+#### Suche nach Nummer 5371
+https://localhost:300/search/5371
 
 ## Contribution
 
-    records: [
-        {
-            number: 000,
-            title: 'Test',
-            points: 000,
-            simple_unit_rate: calculateRate(000),
-            max_unit_rate: '?',
-        },
-    ],
+    {
+        number: 000,
+        title: 'Test',
+        points: 000,
+        simple_unit_rate: calculateRate(000),
+        max_unit_rate: '?',
+    },
