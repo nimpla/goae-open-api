@@ -4,15 +4,15 @@
 
 ## Unterstützte Leistungen
 
-* B. Grundleistungen
-    * I. Allgemeine Beratungen und Untersuchungen
-* C. Sonderleistungen
-* D. Anästhesieleistungen
-* O. Strahlenmedizin/MRT
-    * I. Strahlendiagnostik
-        * 7 Computertomographie
-    * III. MRT
-* P. Sektionsleistungen
+    B. Grundleistungen
+        I. Allgemeine Beratungen und Untersuchungen
+    C. Sonderleistungen
+    D. Anästhesieleistungen
+    O. Strahlenmedizin/MRT
+        I. Strahlendiagnostik
+            7. Computertomographie
+       III. MRT
+    P. Sektionsleistungen
 
 ## Hinweis
 

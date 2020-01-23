@@ -10,6 +10,49 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.get('/search/:number', (req, res) => {
+    const arr = [];
+    const { number } = req.params;
+
+    data.map(i => {
+        if (i.hasOwnProperty('records')) {
+            if (i.records.length > 0 ) {
+                if (i.records[0].hasOwnProperty('number')) {
+                    arr.push(i.records);
+                }
+                else {
+                    i.records.map(j => {
+                        if (j.hasOwnProperty('records')) {
+                            if (j.records.length > 0 ) {
+                                if (j.records[0].hasOwnProperty('number')) {
+                                    arr.push(j.records);
+                                }
+                                else {
+                                    j.records.map(k => {
+                                        if (k.hasOwnProperty('records')) {
+                                            if (k.records.length > 0 ) {
+                                                if (k.records[0].hasOwnProperty('number')) {
+                                                    arr.push(k.records);
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+        }
+    });
+
+    const out = arr.flat().filter(x => x.number === parseInt(number));
+    return res.status(200).json({
+        success: out.length > 0 ? true : false,
+        record: out[0],
+    });
+});
+
 router.get('/:category/:roman?/:id?', (req, res) => {
     const { category, roman, id } = req.params;
     let out = data.find(x => x.id === category);
