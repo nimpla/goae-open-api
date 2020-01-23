@@ -14,7 +14,7 @@ router.get('/:category/:roman?/:id?', (req, res) => {
     const { category, roman, id } = req.params;
     let out = data.find(x => x.id === category);
     if (roman) out = out.records.find(x => x.id === roman);
-    if (id) out = out.records.find(x => x.id === id);
+    if (id) out = out.records.find(x => x.id === parseInt(id));
     if (out) {
         return res.status(200).json({
             success: true,
