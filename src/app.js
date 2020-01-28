@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import helmet from 'helmet';
+import cors from 'cors';
 import logger from 'morgan';
 import rateLimit from 'express-rate-limit';
 
@@ -16,11 +16,8 @@ app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Security
-app.use(helmet.referrerPolicy({ policy: 'same-origin' }));
-app.use(helmet.frameguard({ action: 'sameorigin' }));
-app.use(helmet.xssFilter());
-app.use(helmet.hidePoweredBy());
+// CORS
+app.use(cors());
 
 // Limiter
 app.use(rateLimit({
